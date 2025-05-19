@@ -5,35 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800">
-    <Grid>
-
-        <WrapPanel Orientation="Horizontal"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center" Height="118" Width="740">
-
-            <Label Content="Label" Margin="10"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-
-           
-            <Label Content="Label" Margin="10"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-            <TextBox Text="TextBox" Width="85"/>
-        </WrapPanel>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0 200 0 0 " Content="Button" Width="80"/>
-    </Grid>
+        Title="MainWindow" Height="350" Width="600">
+    
+    <DockPanel LastChildFill="False">
+        <Label DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="20" >Label</Label>
+        <TextBox DockPanel.Dock="Left" Width="220" >TexBox</TextBox>
+        <TextBox DockPanel.Dock="Right" Width="220" >TexBox</TextBox>
+        <Button DockPanel.Dock="Bottom" Margin="0 0 0 40" Height="30" Width="120" >Button</Button>
+    </DockPanel>
 
 </Window>
