@@ -5,40 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="800">
+        Title="MainWindow" Height="500" Width="800">
 
+    <Window.Resources>
+        <LinearGradientBrush x:Key="LinearPanelBrush" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="Yellow" Offset="0"/>
+            <GradientStop Color="LightSkyBlue" Offset="0.5"/>
+            <GradientStop Color="Yellow" Offset="1"/>
+        </LinearGradientBrush>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+
+ 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0"
+                Background="{StaticResource LinearPanelBrush}"
                 BorderBrush="#FFCBBEBE"
                 BorderThickness="2"
                 CornerRadius="10"
                 Margin="5">
             <StackPanel Orientation="Horizontal">
-                <Button ToolTip="Відкрити" >
+                <Button ToolTip="Відкрити">
                     <Image Source="images/open.png" Width="60" Height="60"/>
                 </Button>
-                <Button ToolTip="Стерти" >
+                <Button ToolTip="Стерти">
                     <Image Source="images/clean.png" Width="60" Height="60"/>
                 </Button>
                 <Button ToolTip="Копіювати">
                     <Image Source="images/copy.png" Width="60" Height="60"/>
                 </Button>
-                <Button ToolTip="Вставити" >
+                <Button ToolTip="Вставити">
                     <Image Source="images/paste.png" Width="60" Height="60"/>
                 </Button>
             </StackPanel>
         </Border>
+
         <Border Grid.Row="1"
+                Background="{StaticResource LinearPanelBrush}"
                 BorderBrush="#FFCBBEBE"
                 BorderThickness="2"
                 CornerRadius="10"
                 Margin="5">
             <Grid Margin="10">
                 <Grid.RowDefinitions>
+
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -50,7 +69,10 @@
                          HorizontalScrollBarVisibility="Auto"/>
 
                 <DockPanel Grid.Row="1" LastChildFill="False">
-                    <Button Content="OK" DockPanel.Dock="Bottom" Width="30" Margin="5"/>
+                    <Button Content="OK"
+                            Style="{x:Null}"
+                            DockPanel.Dock="Bottom"
+                            Width="40"/>
                 </DockPanel>
             </Grid>
         </Border>
