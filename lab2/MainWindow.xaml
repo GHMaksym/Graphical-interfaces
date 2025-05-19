@@ -5,16 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel Margin="100">
-        <Label HorizontalAlignment="Center">Label</Label>
+        Title="MainWindow" Height="350" Width="800">
+    <Grid>
 
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
+        <WrapPanel Orientation="Horizontal"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" Height="118" Width="740">
 
+            <Label Content="Label" Margin="10"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
 
-        <Button Width="200" Margin="80 80">Button</Button>
-    </StackPanel>
+           
+            <Label Content="Label" Margin="10"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+            <TextBox Text="TextBox" Width="85"/>
+        </WrapPanel>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0 200 0 0 " Content="Button" Width="80"/>
+    </Grid>
+
 </Window>
