@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="600">
-    
-    <DockPanel LastChildFill="False">
-        <Label DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="20" >Label</Label>
-        <TextBox DockPanel.Dock="Left" Width="220" >TexBox</TextBox>
-        <TextBox DockPanel.Dock="Right" Width="220" >TexBox</TextBox>
-        <Button DockPanel.Dock="Bottom" Margin="0 0 0 40" Height="30" Width="120" >Button</Button>
-    </DockPanel>
+        Title="MainWindow" Height="250" Width="500">
 
+    <Canvas Background="Cyan">
+        <Label Canvas.Left="20" Canvas.Top="20">Lable</Label>
+        <TextBox Canvas.Left="40"  Canvas.Top="40" Width="60">TextBox</TextBox>
+        <Button Canvas.Left="60" Canvas.Top="60"  Width="60">Button</Button>
+    </Canvas>
 </Window>
+
