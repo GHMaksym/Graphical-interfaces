@@ -1,6 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;  // додано простір імен
 
 /// <summary>
-/// Виводить привітання у консоль.
+/// Клас для виведення привітання.
 /// </summary>
-Console.WriteLine("Hello, World!");
+public static class Hello
+{
+    /// <summary>
+    /// Точка входу у додаток.
+    /// </summary>
+    public static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
