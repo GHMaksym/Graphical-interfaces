@@ -6,8 +6,21 @@
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-        
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label   Grid.Row="0" Grid.Column="1">Label</Label>
+        <TextBox Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" >TextBox</TextBox>
+        <Button  Grid.Row="2" Grid.Column="1">Button</Button>
     </Grid>
+
 </Window>
