@@ -21,12 +21,13 @@
         </Style>
     </Window.Resources>
 
- 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <!-- Панель кнопок -->
         <Border Grid.Row="0"
                 Background="{StaticResource LinearPanelBrush}"
                 BorderBrush="#FFCBBEBE"
@@ -49,6 +50,7 @@
             </StackPanel>
         </Border>
 
+        <!-- Робоча область -->
         <Border Grid.Row="1"
                 Background="{StaticResource LinearPanelBrush}"
                 BorderBrush="#FFCBBEBE"
@@ -57,7 +59,6 @@
                 Margin="5">
             <Grid Margin="10">
                 <Grid.RowDefinitions>
-
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -66,18 +67,29 @@
                          Margin="5"
                          AcceptsReturn="True"
                          VerticalScrollBarVisibility="Visible"
-                         HorizontalScrollBarVisibility="Auto"/>
+                         HorizontalScrollBarVisibility="Auto"
+                         FontSize="{Binding Value, ElementName=fontSlider}"/>
 
                 <DockPanel Grid.Row="1" LastChildFill="False">
+                    <Label Content="Розмір шрифту:"
+                           Margin="4"
+                           FontSize="13"
+                           VerticalAlignment="Center"
+                           DockPanel.Dock="Left"/>
+                    <Slider Name="fontSlider"
+                            Margin="4"
+                            MinWidth="100"
+                            Minimum="12"
+                            Maximum="100"
+                            Value="12"
+                            DockPanel.Dock="Left"/>
                     <Button Content="OK"
                             Style="{x:Null}"
-                            DockPanel.Dock="Bottom"
-                            Width="40"/>
+                            Width="70"
+                            Height="35"
+                            DockPanel.Dock="Bottom"/>
                 </DockPanel>
             </Grid>
         </Border>
     </Grid>
-
-
 </Window>
-
